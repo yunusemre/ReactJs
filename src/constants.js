@@ -1,0 +1,2 @@
+export const LIST_RESPONSE = 'LIST_RESPONSE';
+export const EPISODE_RESPONSE = 'EPISODE_RESPONSE';
