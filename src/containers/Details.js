@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { getCharacter, getEpisode } from '../actions';
 import CardDetails from '../components/CardDetails';
-
 class Details extends React.Component {
 	goBack = () => this.props.history.goBack();
 
@@ -44,6 +44,11 @@ class Details extends React.Component {
 Details.defaultProps = {
 	info: {},
 	episodes: [],
+};
+
+Details.propTypes = {
+	info: PropTypes.objectOf(PropTypes.string).isRequired,
+	episodes: PropTypes.array,
 };
 
 const mapDispatchToProps = {

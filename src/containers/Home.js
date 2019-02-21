@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { getCharacter } from '../actions';
 import CardList from '../components/CardList';
 import Loader from '../components/Loader';
@@ -80,6 +81,10 @@ class Home extends React.Component {
 
 Home.defaultProps = {
 	results: []
+};
+
+Home.propTypes = {
+	results: PropTypes.array.isRequired
 };
 
 const mapDispatchToProps = {
