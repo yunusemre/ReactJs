@@ -33,9 +33,7 @@ class Details extends React.Component {
 					&laquo; Back
 				</button>
 				<CardDetails
-					image={info.image}
-					name={info.name}
-					location={info.location}
+					{...info}
 					episodes={episodes}
 				/>
 			</div>
