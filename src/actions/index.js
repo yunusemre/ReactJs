@@ -8,7 +8,7 @@ function get(query, opt) {
 	} else {
 		return axios.get(`${API_URL}/${query}/${opt}`);
 	}
-};
+}
 
 export function getCharacter(opt) {
 	return dispatch => {
@@ -16,13 +16,22 @@ export function getCharacter(opt) {
 			dispatch({ type: LIST_RESPONSE, payload: response.data });
 			return response.data;
 		});
-	}
-};
+	};
+}
 
 export function getEpisode(opt) {
 	return dispatch => {
 		return get('episode', opt).then(response => {
 			dispatch({ type: EPISODE_RESPONSE, payload: response.data });
 		});
+	};
+}
+
+axios.interceptors.request.use(
+	config => {
+		return config;
+	},
+	error => {
+		console.log(error);
 	}
-};
+);
