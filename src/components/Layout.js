@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Layout = ({ children }) => (
 	<div className="Layout">
-		<nav className="navbar navbar-light bg-light" style={{ marginBottom: '15px' }}>
+		<nav className="navbar navbar-light bg-light">
 			<div className="container">
 				<Link to="/" className="navbar-brand">Rick and Morty</Link>
 			</div>
