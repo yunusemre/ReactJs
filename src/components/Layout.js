@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Layout = ({ children }) => (
 	<div className="Layout">
 		<nav className="navbar navbar-light bg-light" style={{ marginBottom: '15px' }}>
 			<div className="container">
-				<a className="navbar-brand">Rick and Morty</a>
+				<Link to="/" className="navbar-brand">Rick and Morty</Link>
 			</div>
 		</nav>
 		{children}

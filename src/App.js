@@ -16,8 +16,8 @@ const App = () => (
 			<Layout>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route path="/:id" component={Details} />
-					<Route path="*" component={NotFound} />
+					<Route path="/character/:id" component={Details} />
+					<Route component={NotFound} />
 				</Switch>
 			</Layout>
 		</BrowserRouter>

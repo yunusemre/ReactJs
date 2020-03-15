@@ -10,7 +10,7 @@ const CardList = ({ image, name, id }) => (
 			<div className="card-body">
 				<p className="text-center">{name}</p>
 				<div className="text-center">
-					<Link to={`${id}`} className="card-link btn btn-outline-primary">
+					<Link to={`character/${id}`} className="card-link btn btn-outline-primary">
 						Details
 					</Link>
 				</div>
