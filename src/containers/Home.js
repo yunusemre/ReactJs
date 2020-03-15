@@ -65,7 +65,9 @@ class Home extends React.Component {
 		return (
 			<div className="container">
 				<div className="row">
-					{results.length > 0 && results.map((res, index) => <CardList {...res} key={index} />)}
+					<div className="d-flex flex-wrap justify-content-between">
+						{results.length > 0 && results.map((res, index) => <CardList {...res} key={index} />)}
+					</div>
 				</div>
 				{loading && (
 					<div className="text-center">
@@ -80,10 +82,6 @@ class Home extends React.Component {
 		);
 	}
 }
-
-Home.defaultProps = {
-	results: []
-};
 
 Home.propTypes = {
 	results: PropTypes.array.isRequired

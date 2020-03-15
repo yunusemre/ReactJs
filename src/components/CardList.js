@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const CardList = ({ image, name, id }) => (
-	<div className="cardList col col-md-3">
+	<div className="cardList col col-md-3 card-group">
 		<div className="card">
 			{!image && <span>Loading ...</span>}
 			<img src={image} className="card-img-top" alt={name} />
@@ -18,12 +18,6 @@ const CardList = ({ image, name, id }) => (
 		</div>
 	</div>
 );
-
-CardList.defaultProps = {
-	image: '',
-	name: '',
-	id: 0
-};
 
 CardList.propTypes = {
 	image: PropTypes.string.isRequired,

@@ -32,9 +32,6 @@ const CardDetails = ({ image, name, location, episodes }) => (
 );
 
 CardDetails.defaultProps = {
-	image: '',
-	name: '',
-	location: {},
 	episodes: []
 };
 
